@@ -1,0 +1,51 @@
+{
+    "contractName": "CreatorController",
+    "abi": [
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_invitationAddress",
+                "type": "address"
+              }
+            ],
+            "name": "inviteCreator",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              }
+            ],
+            "name": "redeemInvitation",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              }
+            ],
+            "name": "updateCreatorName",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "deactivateAccount",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          }
+    ]
+}

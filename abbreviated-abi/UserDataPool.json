@@ -1,0 +1,959 @@
+{
+    "contractName": "UserDataPool",
+    "abi": [
+        {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_invitations",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateDefaultPlatformPercentage",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_defaultInvitations",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateDefaultInvitations",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "string",
+                "name": "_defaultTokenURI",
+                "type": "string"
+              }
+            ],
+            "name": "updateDefaultTokenURI",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_platformPercentage",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateCreatorPlatformPercentage",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_platformPercentage",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesPlatformPercentage",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              }
+            ],
+            "name": "banishCreator",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getDefaultPlatformPercent",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+        },
+        {
+            "inputs": [],
+            "name": "getDefaultInvitations",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_platformPercentage",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_remainingInvitations",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "_invitedBy",
+                "type": "address"
+              },
+              {
+                "internalType": "enum ICreatorDataType.CreatorStatus",
+                "name": "_status",
+                "type": "uint8"
+              }
+            ],
+            "name": "addCreator",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              }
+            ],
+            "name": "updateCreatorName",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "_invitationAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_remainingInvitations",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateCreatorInvitations",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_remainingInvitations",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateCreatorRemainingInvitations",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "enum ICreatorDataType.CreatorStatus",
+                "name": "_status",
+                "type": "uint8"
+              }
+            ],
+            "name": "updateCreatorStatus",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              }
+            ],
+            "name": "getCreator",
+            "outputs": [
+              {
+                "components": [
+                  {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "platformPercentage",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "remainingInvitations",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "invitedBy",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address[]",
+                    "name": "invitations",
+                    "type": "address[]"
+                  },
+                  {
+                    "internalType": "uint256[]",
+                    "name": "seriesIds",
+                    "type": "uint256[]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "totalSeriesTokensMinted",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "enum ICreatorDataType.CreatorStatus",
+                    "name": "status",
+                    "type": "uint8"
+                  }
+                ],
+                "internalType": "struct ICreatorDataType.Creator",
+                "name": "",
+                "type": "tuple"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              }
+            ],
+            "name": "getCreatorRemainingInvites",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              }
+            ],
+            "name": "getCreatorInvites",
+            "outputs": [
+              {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              }
+            ],
+            "name": "getCreatorSeriesIds",
+            "outputs": [
+              {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              }
+            ],
+            "name": "getCreatorPlatformPercent",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "_creatorAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_platformPercentage",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_maxSupply",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_priceInWei",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "_onePerWallet",
+                "type": "bool"
+              },
+              {
+                "internalType": "string",
+                "name": "_scriptConfig",
+                "type": "string"
+              }
+            ],
+            "name": "addSeries",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+              }
+            ],
+            "name": "updateSeriesNameAndDescription",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "_secondPayeeAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_secondPayeePercentage",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesSecondPayee",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "removeSeriesSecondPayee",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "_currencyContract",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "_currencySymbol",
+                "type": "string"
+              }
+            ],
+            "name": "updateSeriesCurrency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "removeSeriesCurrency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_maxSupply",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesMaxSupply",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_priceInWei",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesPriceInWei",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "_onePerWallet",
+                "type": "bool"
+              }
+            ],
+            "name": "updateSeriesOnePerWallet",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "_scriptConfig",
+                "type": "string"
+              }
+            ],
+            "name": "updateSeriesScriptConfig",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "_script",
+                "type": "string"
+              }
+            ],
+            "name": "addScriptToSeries",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "removeLastScriptFromSeries",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "enum ISeriesDataType.SeriesStatus",
+                "name": "_status",
+                "type": "uint8"
+              }
+            ],
+            "name": "updateSeriesStatus",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeries",
+            "outputs": [
+              {
+                "components": [
+                  {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "description",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "creatorAddress",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "platformPercentage",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "secondPayeeAddress",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "secondPayeePercentage",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "currencyContract",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "currencySymbol",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "totalMinted",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxSupply",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "priceInWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "bool",
+                    "name": "onePerWallet",
+                    "type": "bool"
+                  },
+                  {
+                    "internalType": "string[]",
+                    "name": "scripts",
+                    "type": "string[]"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "scriptConfig",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "string",
+                    "name": "tokenURI",
+                    "type": "string"
+                  },
+                  {
+                    "internalType": "enum ISeriesDataType.SeriesStatus",
+                    "name": "status",
+                    "type": "uint8"
+                  }
+                ],
+                "internalType": "struct ISeriesDataType.Series",
+                "name": "",
+                "type": "tuple"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesCreatorAddress",
+            "outputs": [
+              {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesScriptCount",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_scriptIndex",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesScriptAtIndex",
+            "outputs": [
+              {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesMintInformation",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "_totalMinted",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_maxSupply",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesPriceInWei",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesPlatformPercent",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesSecondPayeeInformation",
+            "outputs": [
+              {
+                "internalType": "address",
+                "name": "_secondPayeeAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_secondPayeePercent",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesOnePerWallet",
+            "outputs": [
+              {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "getSeriesTokenURI",
+            "outputs": [
+              {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          },
+          {
+            "inputs": [],
+            "name": "getTotalTokensMinted",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function",
+            "constant": true
+          }
+    ]
+}

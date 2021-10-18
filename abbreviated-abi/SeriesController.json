@@ -1,0 +1,247 @@
+{
+    "contractName": "SeriesController",
+    "abi": [
+        {
+            "inputs": [
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_maxSupply",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_priceInWei",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "_onePerWallet",
+                "type": "bool"
+              },
+              {
+                "internalType": "string",
+                "name": "_scriptConfig",
+                "type": "string"
+              }
+            ],
+            "name": "addSeries",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "_name",
+                "type": "string"
+              },
+              {
+                "internalType": "string",
+                "name": "_description",
+                "type": "string"
+              }
+            ],
+            "name": "updateSeriesNameAndDescription",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "_secondPayeeAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_secondPayeePercentage",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesSecondPayee",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "removeSeriesSecondPayee",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "_currencyContract",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "_currencySymbol",
+                "type": "string"
+              }
+            ],
+            "name": "updateSeriesCurrency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "removeSeriesCurrency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_maxSupply",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesMaxSupply",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "_priceInWei",
+                "type": "uint256"
+              }
+            ],
+            "name": "updateSeriesPriceInWei",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "_scriptConfig",
+                "type": "string"
+              }
+            ],
+            "name": "updateSeriesScriptConfig",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "string",
+                "name": "_script",
+                "type": "string"
+              }
+            ],
+            "name": "addScriptToSeries",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              }
+            ],
+            "name": "removeLastScriptFromSeries",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "_seriesId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "enum ISeriesDataType.SeriesStatus",
+                "name": "_status",
+                "type": "uint8"
+              }
+            ],
+            "name": "updateSeriesStatus",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          }
+    ]
+}
