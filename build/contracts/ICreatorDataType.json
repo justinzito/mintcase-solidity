@@ -1,0 +1,685 @@
+{
+  "contractName": "ICreatorDataType",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ICreatorDataType.sol\":\"ICreatorDataType\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ICreatorDataType.sol\":{\"keccak256\":\"0x972209cb4880899146a44d646d4c24bce0ea9df1a27d5b08514d4512a469712e\",\"license\":\"MEH\",\"urls\":[\"bzz-raw://a819d1dad1f525828306c53d72d19325a9d5e13560d77ce3a781f99063ffcd9c\",\"dweb:/ipfs/QmfTKWsbs8r69jRopmp9dvxrLVKtRQynLMn9CQDwzMqm3h\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MEH\n\npragma solidity ^0.8.0;\n\ninterface ICreatorDataType {\n\n    enum CreatorStatus {\n        NotInvited,\n        Invited,\n        Active,\n        Inactive,\n        Banished\n    }\n\n    struct Creator {\n        string name;\n        uint platformPercentage;\n        uint remainingInvitations;\n        address invitedBy;\n        address[] invitations;\n        uint256[] seriesIds;\n        uint256 totalSeriesTokensMinted;\n        CreatorStatus status;\n    }\n}",
+  "sourcePath": "/Users/jzito/dev/solidity/MintCaseManager/contracts/interfaces/ICreatorDataType.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ICreatorDataType.sol",
+    "exportedSymbols": {
+      "ICreatorDataType": [
+        2524
+      ]
+    },
+    "id": 2525,
+    "license": "MEH",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2497,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 2524,
+        "linearizedBaseContracts": [
+          2524
+        ],
+        "name": "ICreatorDataType",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ICreatorDataType.CreatorStatus",
+            "id": 2503,
+            "members": [
+              {
+                "id": 2498,
+                "name": "NotInvited",
+                "nodeType": "EnumValue",
+                "src": "121:10:5"
+              },
+              {
+                "id": 2499,
+                "name": "Invited",
+                "nodeType": "EnumValue",
+                "src": "141:7:5"
+              },
+              {
+                "id": 2500,
+                "name": "Active",
+                "nodeType": "EnumValue",
+                "src": "158:6:5"
+              },
+              {
+                "id": 2501,
+                "name": "Inactive",
+                "nodeType": "EnumValue",
+                "src": "174:8:5"
+              },
+              {
+                "id": 2502,
+                "name": "Banished",
+                "nodeType": "EnumValue",
+                "src": "192:8:5"
+              }
+            ],
+            "name": "CreatorStatus",
+            "nodeType": "EnumDefinition",
+            "src": "92:114:5"
+          },
+          {
+            "canonicalName": "ICreatorDataType.Creator",
+            "id": 2523,
+            "members": [
+              {
+                "constant": false,
+                "id": 2505,
+                "mutability": "mutable",
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "237:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2504,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "237:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2507,
+                "mutability": "mutable",
+                "name": "platformPercentage",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "258:23:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2506,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "258:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2509,
+                "mutability": "mutable",
+                "name": "remainingInvitations",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "291:25:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2508,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "291:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2511,
+                "mutability": "mutable",
+                "name": "invitedBy",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "326:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2510,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "326:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2514,
+                "mutability": "mutable",
+                "name": "invitations",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "353:21:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 2512,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2513,
+                  "nodeType": "ArrayTypeName",
+                  "src": "353:9:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2517,
+                "mutability": "mutable",
+                "name": "seriesIds",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "384:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 2515,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2516,
+                  "nodeType": "ArrayTypeName",
+                  "src": "384:9:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2519,
+                "mutability": "mutable",
+                "name": "totalSeriesTokensMinted",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "413:31:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2518,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "413:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2522,
+                "mutability": "mutable",
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "454:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_CreatorStatus_$2503",
+                  "typeString": "enum ICreatorDataType.CreatorStatus"
+                },
+                "typeName": {
+                  "id": 2521,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 2520,
+                    "name": "CreatorStatus",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 2503,
+                    "src": "454:13:5"
+                  },
+                  "referencedDeclaration": 2503,
+                  "src": "454:13:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_CreatorStatus_$2503",
+                    "typeString": "enum ICreatorDataType.CreatorStatus"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Creator",
+            "nodeType": "StructDefinition",
+            "scope": 2524,
+            "src": "212:269:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 2525,
+        "src": "58:425:5"
+      }
+    ],
+    "src": "33:450:5"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ICreatorDataType.sol",
+    "exportedSymbols": {
+      "ICreatorDataType": [
+        2524
+      ]
+    },
+    "id": 2525,
+    "license": "MEH",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2497,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 2524,
+        "linearizedBaseContracts": [
+          2524
+        ],
+        "name": "ICreatorDataType",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ICreatorDataType.CreatorStatus",
+            "id": 2503,
+            "members": [
+              {
+                "id": 2498,
+                "name": "NotInvited",
+                "nodeType": "EnumValue",
+                "src": "121:10:5"
+              },
+              {
+                "id": 2499,
+                "name": "Invited",
+                "nodeType": "EnumValue",
+                "src": "141:7:5"
+              },
+              {
+                "id": 2500,
+                "name": "Active",
+                "nodeType": "EnumValue",
+                "src": "158:6:5"
+              },
+              {
+                "id": 2501,
+                "name": "Inactive",
+                "nodeType": "EnumValue",
+                "src": "174:8:5"
+              },
+              {
+                "id": 2502,
+                "name": "Banished",
+                "nodeType": "EnumValue",
+                "src": "192:8:5"
+              }
+            ],
+            "name": "CreatorStatus",
+            "nodeType": "EnumDefinition",
+            "src": "92:114:5"
+          },
+          {
+            "canonicalName": "ICreatorDataType.Creator",
+            "id": 2523,
+            "members": [
+              {
+                "constant": false,
+                "id": 2505,
+                "mutability": "mutable",
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "237:11:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2504,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "237:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2507,
+                "mutability": "mutable",
+                "name": "platformPercentage",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "258:23:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2506,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "258:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2509,
+                "mutability": "mutable",
+                "name": "remainingInvitations",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "291:25:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2508,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "291:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2511,
+                "mutability": "mutable",
+                "name": "invitedBy",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "326:17:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2510,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "326:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2514,
+                "mutability": "mutable",
+                "name": "invitations",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "353:21:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 2512,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "353:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 2513,
+                  "nodeType": "ArrayTypeName",
+                  "src": "353:9:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2517,
+                "mutability": "mutable",
+                "name": "seriesIds",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "384:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 2515,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2516,
+                  "nodeType": "ArrayTypeName",
+                  "src": "384:9:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2519,
+                "mutability": "mutable",
+                "name": "totalSeriesTokensMinted",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "413:31:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2518,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "413:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2522,
+                "mutability": "mutable",
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 2523,
+                "src": "454:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_CreatorStatus_$2503",
+                  "typeString": "enum ICreatorDataType.CreatorStatus"
+                },
+                "typeName": {
+                  "id": 2521,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 2520,
+                    "name": "CreatorStatus",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 2503,
+                    "src": "454:13:5"
+                  },
+                  "referencedDeclaration": 2503,
+                  "src": "454:13:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_CreatorStatus_$2503",
+                    "typeString": "enum ICreatorDataType.CreatorStatus"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Creator",
+            "nodeType": "StructDefinition",
+            "scope": 2524,
+            "src": "212:269:5",
+            "visibility": "public"
+          }
+        ],
+        "scope": 2525,
+        "src": "58:425:5"
+      }
+    ],
+    "src": "33:450:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-08T23:13:19.566Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,51 @@
+Deployment order:
+
+await UserDataPool()
+CreatorController(UserDataPoolAddress)
+await SeriesController(UserDataPoolAddress)
+await MintController(UserDataPoolAddress, SeriesControllerAddress,"MNTCSE0","Mintcase Season 0")
+PaymentController(UserDataPoolAddress, MintControllerAddress)
+
+
+//Setup
+UserDataPool.addRole(CreatorControllerAddress, PROXY_ROLE)
+UserDataPool.addRole(SeriesControllerAddress, PROXY_ROLE)
+UserDataPool.addRole(MintControllerAddress, MINTER_ROLE)
+UserDataPool.addRole(PaymentControllerAddress, PROXY_ROLE)
+
+
+//Test setup, use accounts[X] 
+
+let userDataPool = await UserDataPool.deployed()
+await userDataPool.addCreator(accounts[1],"Creator Numero Uno",40,2,accounts[0],2)
+userDataPool.getCreator(accounts[1])
+
+let creatorController = await CreatorController.deployed()
+creatorController.inviteCreator(accounts[2],{from: accounts[1]})
+userDataPool.getCreator(accounts[1]) //verify remaining invites is 1
+
+creatorController.redeemInvitation("Freddy",{from: accounts[2]})
+
+
+let seriesController = await SeriesController.deployed()
+seriesController.addSeries("My first series","A really cool series",5,"250000000000000000",false,"(script config stuffs)",{from: accounts[1]})
+seriesController.addSeries("Anotha one","A really cool series",50,"500000000000000000",false,"(script config stuffs)",{from: accounts[2]})
+
+seriesController.addScriptToSeries(1,"script added to 1",{from: accounts[1]})
+
+let mintController = await MintController.deployed()
+let paymentController = await PaymentController.deployed()
+paymentController.purchase(1,{from: accounts[1],value: "250000000000000000"})
+
+seriesController.updateSeriesStatus(1,2,{from: accounts[1]})
+paymentController.purchase(1,{from: accounts[4],value: "250000000000000000"})
+
+paymentController.b
+
+//TODO: one per wallet -> two dimensional array seriesMints[seriesId][address] = true/false
+//TODO: payment splitter / puller
+
+paymentController.depositsOf(accounts[0])
+paymentController.depositsOf(accounts[1])
+paymentController.withdraw(accounts[0])
+paymentController.withdraw(accounts[1],{from: accounts[1]})
